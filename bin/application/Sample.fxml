@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="350.0" prefHeight="450.0" prefWidth="350.0" styleClass="right-form" stylesheets="@application.css">
+               <children>
+                  <Label layoutX="141.0" layoutY="93.0" text="Sign In">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="72.0" layoutY="179.0" prefHeight="30.0" prefWidth="220.0" promptText="User nasme" styleClass="textfield" stylesheets="@application.css" />
+                  <PasswordField fx:id="password" layoutX="72.0" layoutY="234.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@application.css" />
+                  <Button fx:id="login" layoutX="92.0" layoutY="290.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="40.0" prefWidth="166.0" styleClass="login-btn" stylesheets="@application.css" text="Login">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon glyphName="USER" glyphStyle="user" layoutX="149.0" layoutY="83.0" selectionEnd="1" selectionStart="1" size="5EM" />
+               <Button fx:id="close" layoutX="292.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@application.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" />
+                     </graphic>
+                     <textFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon glyphName="USER" layoutX="44.0" layoutY="204.0" size="2em" />
+                  <FontAwesomeIcon glyphName="LOCK" layoutX="45.0" layoutY="259.0" size="2em" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="5.0" prefHeight="450.0" prefWidth="350.0" styleClass="left-form" stylesheets="@application.css">
+               <children>
+                  <FontAwesomeIcon fill="#ece5e5" glyphName="CAR" layoutX="110.0" layoutY="188.0" size="10em" />
+                  <Label layoutX="126.0" layoutY="225.0" text="Driving school ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
